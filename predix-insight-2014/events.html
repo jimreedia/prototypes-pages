@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Predix Insight (UX Prototype)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="iids/components/brandkit/favicon/favicon-144px.png">
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="iids/components/brandkit/favicon/favicon-114px.png">
+
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="iids/components/brandkit/favicon/favicon-72px.png">
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="iids/components/brandkit/favicon/favicon.png">
+
+    <link rel="icon" href="iids/components/brandkit/favicon/favicon.ico">
+    <link href="iids/css/iids.css" rel="stylesheet" type="text/css">
+    <link href="iids/css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+      <link id="theme-ie" href="iids/css/ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+
+    
+
+    <script src="iids/components/modernizr/modernizr.js"></script>
+	<link href="jim.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="ge-logo"></span> <span>Predix Insight <small><i>powered by</i> GE Software</small></span></a>
+      <div class="pull-right">
+        <div class="btn-toolbar pull-left">
+          <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-close"></i><span class="user-name">Project wind</span> <i class="icon-chevron-down"></i></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="#">Project aviation</a></li>
+              <li><a href="#">Project energy</a></li>
+              <li><a href="#">Project healthcare</a></li>
+            </ul>
+          </div> <!--end btn-group-->
+          <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i><span class="user-name">Jim Reed</span> <i class="icon-chevron-down"></i></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </div> <!--end btn-group-->
+        </div> <!--end btn-toolbar-->
+      </div> <!--end pull-right-->
+    </div> <!--end container-->
+  </div> <!--end navbar-inner-->
+  <div class="primary-navbar nav-collapse">
+    <div class="container">
+      <ul class="nav">
+        <li><a href="index.html">Orchestrations</a></li>
+        <li><a href="rules.html">Dispatch Rules</a></li>
+        <li class="active"><a href="#">Events</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Resources <i class="icon-chevron-down"></i></a>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Data</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Assets <i class="icon-chevron-down"></i></a>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Asset Groups</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> <!--end primary-navbar-->
+  </div> <!--end container-->
+</div> <!--end navbar-->
+
+<div class="container" style="overflow:hidden;"> <!-- 1000px to force scroll bar -->
+
+	<!-- EVENTS LIST -->
+    
+	<img src="comps/events_list.png" id="events" width="1164" usemap="#events_map" style="position:relative;left:-2px;top:-2px;" alt="Orchestration Events Monitoring">
+    <map name="events_map" id="events_map">
+    	<area shape="rect" coords="1109,295,1137,322" href="#" onclick="changeViewEvents('events_results')" alt="Actions menu" />
+    </map>
+    
+    <!-- ORCHESTRATION RESULTS -->
+    
+    <img src="comps/events_results.png" alt="Orchestration Results: Orchestration four" id="events_results" width="1164" style="position:relative;left:1400px;top:-670px;" usemap="#events_results_map">
+    <map name="events_results_map" id="events_results_map">
+    	<area shape="rect" coords="1,1,182,19" href="#" onclick="changeViewEvents('back_from_orchestration_results')" alt="Breadcrumb - Orchestration Events Monitoring" />
+    	<area shape="rect" coords="1,26,29,53" href="#" onclick="changeViewEvents('back_from_orchestration_results')" alt="Back button" />
+    </map>
+    
+  
+  
+</div> <!--container-->
+
+<script src="iids/components/requirejs/require.js"></script>
+<script src="iids/js/require.config.js"></script>
+<script type="text/javascript">
+  // override config.js baseUrl so all future calls
+  // are relative to this projects' root path to assets
+  require.config({
+    baseUrl: 'iids'
+  });
+  require(['iids']);
+</script>
+    <script src="iids/components/respond/respond.src.js"></script>
+    
+	<script src="jim.js" type="text/javascript"></script>
+  </body>
+</html>
+
